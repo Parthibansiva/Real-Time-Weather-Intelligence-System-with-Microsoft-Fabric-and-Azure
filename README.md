@@ -1,3 +1,5 @@
+Real-Time-Weather-Intelligence-System-with-Microsoft-Fabric-and-Azure
+
 📘 Overview
 
 This project demonstrates how to build a real-time weather monitoring and alerting system using a modern data engineering stack. By integrating Weather APIs, Azure Databricks, Azure Functions, Event Hubs, Microsoft Fabric, Kusto DB, and Power BI, we enable real-time data streaming, processing, visualization, and alerts.
