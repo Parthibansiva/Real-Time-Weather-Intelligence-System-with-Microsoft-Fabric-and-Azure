@@ -7,53 +7,48 @@ This project demonstrates how to build a real-time weather monitoring and alerti
 ![weatherdata_ultrahighres](https://github.com/user-attachments/assets/8ede0de6-bb41-4987-a736-a66df0aae22d)
 
 
-📅 Agenda
-Environment Setup
+**📅 Agenda**
 
-Data Ingestion
-
-Cost Analysis & Architectural Decisions
-
-Real-Time Streaming & Processing
-
-Power BI Dashboard & Real-Time Alerts
+*Data Ingestion  
+*Cost Analysis & Architectural Decisions  
+*Real-Time Streaming & Processing  
+*Power BI Dashboard & Real-Time Alerts  
 
 
 
 
-**🔄 Data Ingestion using Notebook**
+## 📓 Notebook Setup (Weather API Ingestion)
 
- **Steps:**
- 
-1.Create and Set Up Event Hub
+1. **Create a Development Environment**  
+   - on fabric notebook.
+
+2. **Install Required Libraries**  
+   - `requests`, `pyspark`, and Azure Event Hub connector (`azure-eventhubs-spark`)
+
+3. **Configure Azure Key Vault Integration**  
+   - Use secret scopes or environment variables to access the Weather API key securely.
+
+4. **Test API Access in Notebook**  
+   - Use Python and `requests` to call the Weather API and verify the response.
+
+5. **Parse Weather API Response**  
+   - Extract and transform JSON data into structured format using PySpark DataFrames.
+
+6. **Send Data to Azure Event Hub**  
+   - Use the Event Hub Spark connector to stream structured weather data in real-time.
+
+7. **Schedule Notebook Jobs (Optional)**  
+   - Set up automated runs for continuous or scheduled ingestion.
+
+
+
   
-2.Create a notebook in fabric
-  
-3.Install Event Hub Libraries
-  
-4.Send a Test Event from Notebook to Event Hub
-  
-5.Configure Azure Key Vault in Notebook
- 
-6.Weather API Testing in Notebook
-  
-7.Develop Complete Code for Weather Data Extraction
-  
-8.Ingest Final Weather Data from Notebook to Event Hub
+## ⚙️ Azure Function Setup (Weather API Ingestion)
 
-  
-Data Ingestion using Azure Function
-
-1.Create Function App in Azure with Python runtime.
-
-2.Add Timer Trigger to call Weather API at regular intervals 30sec.
-
-3.Store API Key in Azure Key Vault and access it securely via Managed Identity.
-
-4.Write Code to fetch weather data using requests and transform as needed.
-
-5.Send Data to Event Hub using the Azure Event Hub SDK.
-
-6.Test Locally and Deploy using VS Code or Azure CLI.
+1. **Create Function App** in Azure with Python runtime.  
+2. **Add Timer Trigger** to call Weather API at regular intervals 30sec.  
+3. **Store API Key in Azure Key Vault** and access it securely via Managed Identity.  
+4. **Write Code** to fetch weather data using `requests` and transform as needed.  
+5. **Send Data to Event Hub** using the Azure Event Hub SDK. 
 
 
